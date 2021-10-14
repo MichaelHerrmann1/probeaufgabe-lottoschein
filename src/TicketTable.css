@@ -1,0 +1,21 @@
+.TicketTable {
+  display: grid;
+  grid-template-columns: repeat(7, calc(100% / 7));
+  grid-template-rows: repeat(7, calc(100% / 7));
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (min-width: 300px) {
+  .TicketTable {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .TicketTable {
+    width: 720px;
+    height: 720px;
+  }
+}
