@@ -1,21 +1,21 @@
-.TicketTable {
+.square-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+}
+
+.ticket-table {
+  padding: 2%;
   display: grid;
   grid-template-columns: repeat(7, calc(100% / 7));
   grid-template-rows: repeat(7, calc(100% / 7));
-  width: 300px;
-  height: 300px;
+  /* fill parent container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
 }
 
-@media only screen and (min-width: 300px) {
-  .TicketTable {
-    width: 100vw;
-    height: 100vw;
-  }
-}
 
-@media only screen and (min-width: 720px) {
-  .TicketTable {
-    width: 720px;
-    height: 720px;
-  }
-}

@@ -15,5 +15,11 @@ export default function TicketTable() {
       handleAction={null}
     />
   ));
-  return <div className="TicketTable">{tableCells}</div>;
+  return (
+    <div className="square-container">
+      <div className="ticket-table">
+        {tableCells}
+      </div>
+    </div>
+  )
 }
