@@ -29,7 +29,7 @@ export default function TicketTable({ userBet, onBetChange }) {
     <TicketCell
       key={i}
       number={i}
-      enabled={!(userBet.length >= 6)}
+      enabled={userBet.length < 6 || userBet.includes(i)}
       crossed={userBet.includes(i)}
       handleAction={handleClick}
     />

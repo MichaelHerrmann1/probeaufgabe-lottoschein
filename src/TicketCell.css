@@ -1,7 +1,31 @@
 .ticket-cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10%;
-    background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8%;
+  background-color: #fff;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.ticket-cell--disabled {
+  background-color: rgb(248, 250, 252);
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+.ticket-cell__crossmark {
+  position: absolute;
+  width: 80%;
+  stroke: rgb(46, 136, 238);
+  stroke-width: 20;
+}
+
+.ticket-cell__crossmark--animate {
+  display: none;
+}
+
+.ticket-cell__number {
+  z-index: 1;
 }
