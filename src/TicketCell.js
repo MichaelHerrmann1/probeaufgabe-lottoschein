@@ -10,12 +10,29 @@ export default function TicketCell({ number, enabled, crossed, handleAction }) {
       <svg
         viewBox="0 0 100 100"
         className={`ticket-cell__crossmark
-          ${!crossed ? "ticket-cell__crossmark--animate" : ""}`}
+          ${crossed ? "ticket-cell__crossmark--crossed" : ""}`}
       >
-        <line x1="5" y1="5" x2="95" y2="95" className="redline" />
-        <line x1="95" y1="5" x2="5" y2="95" className="redline" />
+        <line
+          x1="5"
+          y1="5"
+          x2="95"
+          y2="95"
+          className="ticket-cell__crossmark__1"
+        />
+        <line
+          x1="5"
+          y1="95"
+          x2="95"
+          y2="5"
+          className="ticket-cell__crossmark__2"
+        />
       </svg>
-      <div className="ticket-cell__number">{number}</div>
+      <div
+        className={`ticket-cell__number 
+          ${crossed ? "ticket-cell__number--crossed" : ""}`}
+      >
+        {number}
+      </div>
     </div>
   );
 }

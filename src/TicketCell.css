@@ -7,6 +7,11 @@
   background-color: #fff;
   border-radius: 20%;
   cursor: pointer;
+  transition: background-color 0.2s linear 0s;
+}
+
+.ticket-cell:hover:not(.ticket-cell--disabled) {
+  background-color: rgb(241, 246, 255);
 }
 
 .ticket-cell--disabled {
@@ -17,15 +22,31 @@
 
 .ticket-cell__crossmark {
   position: absolute;
-  width: 80%;
+  width: 70%;
   stroke: rgb(46, 136, 238);
-  stroke-width: 20;
+  stroke-width: 16;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
 }
 
-.ticket-cell__crossmark--animate {
-  display: none;
+.ticket-cell__crossmark__1 {
+  transition: stroke-dashoffset 0.3s ease-in-out 0s;
+}
+
+.ticket-cell__crossmark__2 {
+  transition: stroke-dashoffset 0.3s ease-in-out 0.25s;
+}
+
+.ticket-cell__crossmark--crossed {
+  stroke-dashoffset: 0;
 }
 
 .ticket-cell__number {
   z-index: 1;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.ticket-cell__number--crossed {
+  font-size: 0.8em;
+  transform: translateY(110%);
 }

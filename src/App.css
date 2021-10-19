@@ -4,19 +4,17 @@
   background-color: rgb(228, 233, 238);
   border-radius: 3%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: clamp(1em, 1.3em, 3.5vw);
 }
 
 @media only screen and (min-width: 300px) {
   .App {
     width: 100%;
-    font-size: 1.15em;
   }
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 35rem) {
   .App {
-    width: 720px;
-    font-size: 1.4em;
+    width: 35rem;
   }
 }
