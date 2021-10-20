@@ -1,0 +1,56 @@
+.circ-prog-btn {
+  position: relative;
+  width: 100%;
+}
+/* rgb(191, 214, 240); rgb(46, 136, 238); */
+.circ-prog-btn__button {
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  top: 0;
+  right: 0;
+  background-color: rgb(46, 136, 238);
+
+  /* capsule shape: ridicously high number */
+  /* with other concepts like 20%/50% it doesn't work well */
+  border-radius: 400vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-size: 1.15em;
+  transition: width 0.5s ease-in-out 0.5s, opacity 0.5s ease-in-out 0s;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.circ-prog-btn__button:hover {
+  background-color: rgb(26, 110, 206);
+}
+
+.circ-prog-btn__button--unlocked {
+  width: 100%;
+  opacity: 1;
+}
+
+.circ-prog-btn__buttontext {
+  padding-right: 1em;
+}
+
+.circ-prog-btn__buttontext::after {
+  content: "❯";
+  margin-left: 0.3em;
+}
+
+.circ-prog-btn__circle {
+  width: 40%;
+  margin-left: auto;
+  transition: transform 0.5s ease-in-out 0.5s;
+}
+
+.circ-prog-btn__circle--unlocked {
+  transform: translateX(-151%);
+}

@@ -19,7 +19,7 @@ export default function TicketTable({ userBet, onBetChange }) {
     let newBetSan = newBet.filter((number) => number >= 1 && number <= 49);
     if (newBetSan.length > 6) newBetSan.splice(6, newBetSan.length - 6);
 
-    newBetSan.sort();
+    newBetSan.sort((a, b) => a - b); //integer sort
     onBetChange(newBetSan);
   };
 
