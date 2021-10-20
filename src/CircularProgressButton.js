@@ -1,7 +1,7 @@
 import React from "react";
 import CircularProgress from "./CircularProgress";
 
-import "./CircularProgressButton.css";
+import "./CircularProgressButton.scss";
 
 export default function CircularProgressButton({
   value,

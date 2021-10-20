@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./CircularProgress.css";
+import "./CircularProgress.scss";
 
 export default function CircularProgress({ value, maxValue, className = "" }) {
   return (

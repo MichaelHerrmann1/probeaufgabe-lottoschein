@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TicketTable from "./TicketTable";
 import CircularProgressButton from "./CircularProgressButton";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [userBet, setUserBet] = useState([]);

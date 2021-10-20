@@ -1,5 +1,5 @@
 import React from "react";
-import "./TicketCell.css";
+import "./TicketCell.scss";
 
 export default function TicketCell({ number, enabled, crossed, handleAction }) {
   return (

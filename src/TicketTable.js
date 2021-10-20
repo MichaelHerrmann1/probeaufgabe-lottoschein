@@ -1,7 +1,7 @@
 import React from "react";
 import TicketCell from "./TicketCell";
 
-import "./TicketTable.css";
+import "./TicketTable.scss";
 
 export default function TicketTable({ userBet, onBetChange }) {
   const handleClick = (number) => {
