@@ -3,7 +3,11 @@ import TicketCell from "./TicketCell";
 
 import "./TicketTable.scss";
 
-export default function TicketTable({ userBet, onBetChange }) {
+export default function TicketTable({
+  userBet,
+  onBetChange,
+  onUnallowedClick,
+}) {
   const handleClick = (number) => {
     let newBet = [];
     if (userBet.includes(number)) {
@@ -31,7 +35,8 @@ export default function TicketTable({ userBet, onBetChange }) {
       number={i}
       enabled={userBet.length < 6 || userBet.includes(i)}
       crossed={userBet.includes(i)}
-      handleAction={handleClick}
+      onAction={handleClick}
+      onUnallowedClick={onUnallowedClick}
     />
   ));
 

@@ -1,11 +1,17 @@
 import React from "react";
 import "./TicketCell.scss";
 
-export default function TicketCell({ number, enabled, crossed, handleAction }) {
+export default function TicketCell({
+  number,
+  enabled,
+  crossed,
+  onAction,
+  onUnallowedClick,
+}) {
   return (
     <div
       className={`ticket-cell ${enabled ? "" : "ticket-cell--disabled"}`}
-      onClick={() => (enabled ? handleAction(number) : undefined)}
+      onClick={() => (enabled ? onAction(number) : onUnallowedClick())}
     >
       <div
         className={`ticket-cell__crossmark-dummy
