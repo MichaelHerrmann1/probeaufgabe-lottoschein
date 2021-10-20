@@ -1,11 +1,13 @@
 @import "_colors.scss";
 
 .ticket-cell {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 8%;
+  padding: 0.3rem 0;
+
   background-color: $ticket-cell-bg;
   border-radius: 20%;
   cursor: pointer;
@@ -22,21 +24,32 @@
   color: $disabled-text;
 }
 
+.ticket-cell__crossmark-dummy {
+  position: relative;
+  height: 0%;
+  transition: height 0.2s ease-in-out 0s;
+}
+
+.ticket-cell__crossmark-dummy--crossed {
+  height: 75%;
+}
+
 .ticket-cell__crossmark {
   position: absolute;
-  width: 70%;
+  height: 100%;
   stroke: $primary;
   stroke-width: 16;
   stroke-dasharray: 130;
   stroke-dashoffset: 130;
+  transform: translateX(-50%);
 }
 
 .ticket-cell__crossmark__1 {
-  transition: stroke-dashoffset 0.3s ease-in-out 0s;
+  transition: stroke-dashoffset 0.2s ease-in-out 0.2s;
 }
 
 .ticket-cell__crossmark__2 {
-  transition: stroke-dashoffset 0.3s ease-in-out 0.25s;
+  transition: stroke-dashoffset 0.2s ease-in-out 0.35s;
 }
 
 .ticket-cell__crossmark--crossed {
@@ -45,10 +58,10 @@
 
 .ticket-cell__number {
   z-index: 1;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  line-height: 0.7em;
 }
 
 .ticket-cell__number--crossed {
   font-size: 0.8em;
-  transform: translateY(110%);
 }

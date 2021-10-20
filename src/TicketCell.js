@@ -7,26 +7,31 @@ export default function TicketCell({ number, enabled, crossed, handleAction }) {
       className={`ticket-cell ${enabled ? "" : "ticket-cell--disabled"}`}
       onClick={() => (enabled ? handleAction(number) : undefined)}
     >
-      <svg
-        viewBox="0 0 100 100"
-        className={`ticket-cell__crossmark
-          ${crossed ? "ticket-cell__crossmark--crossed" : ""}`}
+      <div
+        className={`ticket-cell__crossmark-dummy
+          ${crossed ? "ticket-cell__crossmark-dummy--crossed" : ""}`}
       >
-        <line
-          x1="5"
-          y1="5"
-          x2="95"
-          y2="95"
-          className="ticket-cell__crossmark__1"
-        />
-        <line
-          x1="5"
-          y1="95"
-          x2="95"
-          y2="5"
-          className="ticket-cell__crossmark__2"
-        />
-      </svg>
+        <svg
+          viewBox="0 0 100 100"
+          className={`ticket-cell__crossmark
+            ${crossed ? "ticket-cell__crossmark--crossed" : ""}`}
+        >
+          <line
+            x1="5"
+            y1="5"
+            x2="95"
+            y2="95"
+            className="ticket-cell__crossmark__1"
+          />
+          <line
+            x1="5"
+            y1="95"
+            x2="95"
+            y2="5"
+            className="ticket-cell__crossmark__2"
+          />
+        </svg>
+      </div>
       <div
         className={`ticket-cell__number 
           ${crossed ? "ticket-cell__number--crossed" : ""}`}
